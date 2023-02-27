@@ -238,6 +238,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMessage: A start message is a message at the start.
   updateMessage: An update message is a message from an update.
+  message1: 'Hello World! '
+  message2: Hola Mundo!
+  message3: Bonjour Monde!
+  messageChoice: -1
+  messages:
+  - This is message 1 (array)
+  - This is message 2 (array)
+  - This is message 3 (array)
 --- !u!4 &1727534389
 Transform:
   m_ObjectHideFlags: 0
