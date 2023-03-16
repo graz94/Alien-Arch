@@ -241,7 +241,7 @@ MonoBehaviour:
   message1: 'Hello World! '
   message2: Hola Mundo!
   message3: Bonjour Monde!
-  messageChoice: -1
+  messageChoice: 0
   messages:
   - This is message 1 (array)
   - This is message 2 (array)
