@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 979745638}
   - component: {fileID: 979745637}
   - component: {fileID: 979745636}
+  - component: {fileID: 979745639}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -638,6 +639,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979745634}
   m_CullTransparentMesh: 1
+--- !u!114 &979745639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979745634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3022a48897eaa394487f82b01983b8b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1117989852
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +799,7 @@ GameObject:
   - component: {fileID: 1293011404}
   - component: {fileID: 1293011403}
   - component: {fileID: 1293011406}
+  - component: {fileID: 1293011407}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -857,7 +871,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1293011404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1293011407}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MyScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1293011404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,6 +951,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &1293011407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293011401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d0179615738704aa84e901fe19cab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1316402222
 GameObject:
   m_ObjectHideFlags: 0
