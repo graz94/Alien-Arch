@@ -8,7 +8,9 @@ public class PlayerMovementScript : MonoBehaviour
     //Reference variable so we can use the Rigidbody
     //Set it to null by default, which means we do NOT have a reference yet
     private Rigidbody2D physicsBody = null;
-
+    
+    public Collider2D groundSensor = null;
+    public LayerMask groundLayer = 0;
     public float jumpSpeed = 10;
     public void MoveLeft()
     {
@@ -25,12 +27,15 @@ public class PlayerMovementScript : MonoBehaviour
     
     public void Jump()
     {
-        // Make a variable to hold our velocity and get the current velocity from the physics component
-        Vector2 newVelocity = physicsBody.velocity;
-        // Set our velocity to move in the positive y (up) direction
-        newVelocity.y = jumpSpeed;
-        // Update our component's velocity to be our newly changed value
-        physicsBody.velocity = newVelocity;
+        if (groundSensor.IsTouchingLayers(groundLayer))
+        {
+            // Make a variable to hold our velocity and get the current velocity from the physics component
+            Vector2 newVelocity = physicsBody.velocity;
+            // Set our velocity to move in the positive y (up) direction
+            newVelocity.y = jumpSpeed;
+            // Update our component's velocity to be our newly changed value
+            physicsBody.velocity = newVelocity;
+        }
     }
     private void Awake()
     {
