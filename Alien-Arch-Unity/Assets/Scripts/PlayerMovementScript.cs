@@ -15,13 +15,13 @@ public class PlayerMovementScript : MonoBehaviour
     public void MoveLeft()
     {
         Vector2 newVelocity = physicsBody.velocity;
-        newVelocity.x = -1;
+        newVelocity.x = -5;
         physicsBody.velocity = newVelocity;
     }
     public void MoveRight()
     {
         Vector2 newVelocity = physicsBody.velocity;
-        newVelocity.x = 1;
+        newVelocity.x = 5;
         physicsBody.velocity = newVelocity;
     }
     
